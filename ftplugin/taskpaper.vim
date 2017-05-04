@@ -46,6 +46,9 @@ setlocal fo-=c fo+=rol
 " Set 'autoindent' to maintain indent level
 setlocal autoindent
 
+" Conceal hyphens to display empty checkbox
+autocmd fileType taskpaper call matchadd('Conceal', '^\s*\zs-', 10, -1, {'conceal': '▢'})
+
 " Set up mappings
 if !exists("no_plugin_maps") && !exists("no_taskpaper_maps")
     nnoremap <silent> <buffer> <Plug>TaskPaperFoldProjects
