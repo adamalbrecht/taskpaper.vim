@@ -40,7 +40,7 @@ setlocal iskeyword+=@-@
 setlocal noexpandtab
 set list
 set showbreak=↪\ 
-set listchars=tab:┆\
+set listchars=tab:┆\ 
 
 " Change 'comments' and 'formatoptions' to continue to write a task item
 setlocal comments=b:-
