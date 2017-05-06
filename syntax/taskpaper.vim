@@ -44,7 +44,7 @@ HiLink taskpaperProject       Identifier
 HiLink taskpaperDone          Comment
 HiLink taskpaperCancelled     Comment
 HiLink taskpaperComment       Comment
-HiLink taskpaperIndent        NonText
+HiLink taskpaperIndent        Comment
 
 call taskpaper#tag_style_dict(g:task_paper_styles)
 
