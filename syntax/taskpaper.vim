@@ -23,6 +23,7 @@ endif
 
 syn case ignore
 
+syn match taskpaperIndent     	/\t/
 syn match taskpaperComment	/^.*$/ contains=taskpaperContext
 syn match taskpaperProject	/^.\+:\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)*$/ contains=taskpaperContext
 syn match taskpaperListItem	/^\t*-\s\+/
