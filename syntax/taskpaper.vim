@@ -23,7 +23,7 @@ endif
 
 syn case ignore
 
-syn match taskpaperIndent     	/\t/
+syn match taskpaperIndent	/\t/
 syn match taskpaperComment	/^.*$/ contains=taskpaperContext
 syn match taskpaperProject	/^.\+:\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)*$/ contains=taskpaperContext
 syn match taskpaperListItem	/^\t*-\s\+/
@@ -44,6 +44,7 @@ HiLink taskpaperProject       Identifier
 HiLink taskpaperDone          Comment
 HiLink taskpaperCancelled     Comment
 HiLink taskpaperComment       Comment
+HiLink taskpaperIndent        NonText
 
 call taskpaper#tag_style_dict(g:task_paper_styles)
 
