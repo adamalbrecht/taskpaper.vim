@@ -51,7 +51,7 @@ setlocal fo-=c fo+=rol
 setlocal autoindent
 
 " Conceal hyphens to display empty checkbox
-autocmd fileType taskpaper call matchadd('Conceal', '^\s*\zs-', 10, -1, {'conceal': '▢'})
+call matchadd('Conceal', '^\s*\zs-', 10, -1, {'conceal': '▢'})
 
 " Set up mappings
 if !exists("no_plugin_maps") && !exists("no_taskpaper_maps")
@@ -109,6 +109,7 @@ if !exists("no_plugin_maps") && !exists("no_taskpaper_maps")
     nmap <buffer> <Leader>tT <Plug>TaskPaperShowToday
     nmap <buffer> <Leader>tX <Plug>TaskPaperShowCancelled
     nmap <buffer> <Leader>td <Plug>TaskPaperToggleDone
+    nmap <buffer> <space>    <Plug>TaskPaperToggleDone
     nmap <buffer> <Leader>tt <Plug>TaskPaperToggleToday
     nmap <buffer> <Leader>tx <Plug>TaskPaperToggleCancelled
     nmap <buffer> <Leader>tm <Plug>TaskPaperMoveToProject
