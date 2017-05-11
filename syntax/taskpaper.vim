@@ -30,9 +30,9 @@ syn match taskpaperListItem		/^\t*-\s\+/ contains=taskpaperTaskLeader
 syn match taskpaperContext		/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match taskpaperDone			/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/ contains=taskpaperDoneLeader
 syn match taskpaperCancelled		/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/ contains=taskpaperCancelledLeader
-syn match taskpaperTaskLeader		'^\s*\zs-' conceal cchar=☐
-syn match taskpaperDoneLeader		'^\s*\zs-' conceal cchar=☑
-syn match taskpaperCancelledLeader	'^\s*\zs-' conceal cchar=☒
+syn match taskpaperTaskLeader		'^\s*\zs-' conceal cchar=▢
+syn match taskpaperDoneLeader		'^\s*\zs-' conceal cchar=✔
+syn match taskpaperCancelledLeader	'^\s*\zs-' conceal cchar=✕
 
 syn sync fromstart
 
