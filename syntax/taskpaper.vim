@@ -30,6 +30,8 @@ syn match taskpaperListItem	/^\t*-\s\+/
 syn match taskpaperContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match taskpaperCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
+syn match taskpaperTaskLeader	'^\s*\zs-' conceal cchar=▢
+syn match taskpaperDoneLeader	'^\s*\zs-' conceal cchar=✓ contains=taskpaperDone
 
 syn sync fromstart
 
@@ -41,6 +43,7 @@ HiLink taskpaperListItem      Identifier
 " HiLink taskpaperCancelled     NonText
 HiLink taskpaperContext       String
 HiLink taskpaperProject       Identifier
+HiLink taskpaperTaskLeader    Identifier
 HiLink taskpaperDone          Comment
 HiLink taskpaperCancelled     Comment
 HiLink taskpaperComment       Comment
