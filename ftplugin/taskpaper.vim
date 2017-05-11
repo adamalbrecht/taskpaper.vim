@@ -46,6 +46,8 @@ match taskpaperIndent /\t/
 " Change 'comments' and 'formatoptions' to continue to write a task item
 setlocal comments=b:-
 setlocal fo-=c fo+=rol
+setlocal conceallevel=1
+setlocal concealcursor=nvic
 
 " Set 'autoindent' to maintain indent level
 setlocal autoindent

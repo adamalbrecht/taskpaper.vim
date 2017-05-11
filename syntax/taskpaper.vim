@@ -26,12 +26,12 @@ syn case ignore
 syn match taskpaperIndent	/\t/
 syn match taskpaperComment	/^.*$/ contains=taskpaperContext
 syn match taskpaperProject	/^.\+:\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)*$/ contains=taskpaperContext
-syn match taskpaperListItem	/^\t*-\s\+/
+syn match taskpaperListItem	/^\t*-\s\+/ contains=taskpaperTaskLeader
 syn match taskpaperContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
-syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
+syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/ contains=taskpaperDoneLeader
 syn match taskpaperCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
 syn match taskpaperTaskLeader	'^\s*\zs-' conceal cchar=▢
-" syn match taskpaperDoneLeader	'^\s*\zs-' conceal cchar=✓ contains=taskpaperDone
+syn match taskpaperDoneLeader	'^\s*\zs-' conceal cchar=✓
 
 syn sync fromstart
 
@@ -44,6 +44,7 @@ HiLink taskpaperListItem      Identifier
 HiLink taskpaperContext       String
 HiLink taskpaperProject       Identifier
 HiLink taskpaperTaskLeader    Conceal
+HiLink taskpaperDoneLeader    Conceal
 HiLink taskpaperDone          Comment
 HiLink taskpaperCancelled     Comment
 HiLink taskpaperComment       Comment
