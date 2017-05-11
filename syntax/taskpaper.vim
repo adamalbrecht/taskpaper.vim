@@ -43,7 +43,7 @@ HiLink taskpaperListItem      Identifier
 " HiLink taskpaperCancelled     NonText
 HiLink taskpaperContext       String
 HiLink taskpaperProject       Identifier
-HiLink taskpaperTaskLeader    Identifier
+HiLink taskpaperTaskLeader    Conceal
 HiLink taskpaperDone          Comment
 HiLink taskpaperCancelled     Comment
 HiLink taskpaperComment       Comment
