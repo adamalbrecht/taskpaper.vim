@@ -42,6 +42,7 @@ set list
 set showbreak=↪\ 
 set listchars=tab:┆\ 
 match taskpaperIndent /\t/
+set breakindent
 
 " Change 'comments' and 'formatoptions' to continue to write a task item
 setlocal comments=b:-
